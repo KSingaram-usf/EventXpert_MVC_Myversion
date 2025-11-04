@@ -6741,11 +6741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC/EventXpert.csproj",
+      "projectUniqueName": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/EventXpert.csproj",
       "projectName": "EventXpert",
-      "projectPath": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC/EventXpert.csproj",
+      "projectPath": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/EventXpert.csproj",
       "packagesPath": "/Users/kushalreddysingaram/.nuget/packages/",
-      "outputPath": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC/obj/",
+      "outputPath": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kushalreddysingaram/.nuget/NuGet/NuGet.Config"

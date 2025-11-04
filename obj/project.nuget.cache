@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3RhfXkWWcSQ=",
+  "dgSpecHash": "SEcAdDsA6Kk=",
   "success": true,
-  "projectFilePath": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC/EventXpert.csproj",
+  "projectFilePath": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/EventXpert.csproj",
   "expectedPackageFiles": [
     "/Users/kushalreddysingaram/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/Users/kushalreddysingaram/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
