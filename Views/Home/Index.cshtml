@@ -1,0 +1,80 @@
+﻿@model IEnumerable<EventXpert.Models.Event>
+@{
+    ViewData["Title"] = "Tampa Bay Sports Hub";
+}
+
+<section class="hero fade-in">
+    <h1>Tampa Bay Sports Events &amp; Tickets</h1>
+    <p>Your single hub for USF Bulls, Buccaneers, Lightning &amp; Rowdies updates.</p>
+</section>
+
+<section class="logos-section fade-in">
+    <h2 class="section-title">Featured Teams</h2>
+    <div class="logo-carousel">
+        <div class="logo-track">
+            <div class="logo-item"><img src="~/img/usf.png" alt="USF Bulls"><span>USF Bulls</span></div>
+            <div class="logo-item"><img src="~/img/bucs.png" alt="Tampa Bay Buccaneers"><span>Buccaneers</span></div>
+            <div class="logo-item"><img src="~/img/lightning.png" alt="Tampa Bay Lightning"><span>Lightning</span></div>
+            <div class="logo-item"><img src="~/img/rowdies.png" alt="Tampa Bay Rowdies"><span>Rowdies</span></div>
+
+            <div class="logo-item"><img src="~/img/usf.png" alt="USF Bulls"><span>USF Bulls</span></div>
+            <div class="logo-item"><img src="~/img/bucs.png" alt="Tampa Bay Buccaneers"><span>Buccaneers</span></div>
+            <div class="logo-item"><img src="~/img/lightning.png" alt="Tampa Bay Lightning"><span>Lightning</span></div>
+            <div class="logo-item"><img src="~/img/rowdies.png" alt="Tampa Bay Rowdies"><span>Rowdies</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="features fade-in">
+    <div class="card">
+        <h3>Local Focus</h3>
+        <p>Clean schedules and ticket insights for Tampa Bay fans.</p>
+    </div>
+    <div class="card">
+        <h3>Smart Assistant</h3>
+        <p>Chat with EventXpert for dates, venues and prices instantly.</p>
+    </div>
+    <div class="card">
+        <h3>Interactive Charts</h3>
+        <p>Visualize trends across teams, venues and ticket ranges.</p>
+    </div>
+</section>
+
+<section class="events-preview fade-in">
+    <h2 class="section-title">Upcoming Events</h2>
+    <p class="events-desc">Explore live Tampa Bay match schedules — these events power the chatbot and analytics dashboards.</p>
+
+    <table class="events-table">
+        <thead>
+            <tr>
+                <th>Match</th>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Price ($)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model)
+            {
+                <tr>
+                    <td>@e.Match</td>
+                    <td>@e.Date.ToString("MMM dd, yyyy")</td>
+                    <td>@e.Venue</td>
+                    <td>@e.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
+<button id="topBtn">&#8593;</button>
+
+@section Scripts {
+    <script>
+        const btn = document.getElementById("topBtn");
+        window.onscroll = () => {
+            btn.style.display = (window.scrollY > 250) ? "block" : "none";
+        };
+        btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    </script>
+}

@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="about-container">
+    <section class="intro">
+        <h2>About Our Team - EventXpert</h2>
+        <p>
+            <strong>EventXpert</strong> is a sports-event web platform focused on Tampa Bay teams,
+            combining an AI chatbot and interactive data visualizations.
+            Built for ISM6225 (Fall 2025), it demonstrates web design, analytics, and Botpress integration.
+        </p>
+    </section>
+
+    <section class="team-section">
+        <div class="team-card">
+            <h3>Arnav Mohite</h3>
+            <p><strong>U04619012</strong></p>
+            <p><a href="mailto:amohite@usf.edu"><i class="fas fa-envelope"></i> amohite@usf.edu</a></p>
+        </div>
+        <div class="team-card">
+            <h3>Kajal Sharma</h3>
+            <p><strong>U43213339</strong></p>
+            <p><a href="mailto:kajalsharma@usf.edu"><i class="fas fa-envelope"></i> kajalsharma@usf.edu</a></p>
+        </div>
+        <div class="team-card">
+            <h3>Raees Parkar</h3>
+            <p><strong>U03588639</strong></p>
+            <p><a href="mailto:rparkar@usf.edu"><i class="fas fa-envelope"></i> rparkar@usf.edu</a></p>
+        </div>
+        <div class="team-card">
+            <h3>Kushal Reddy</h3>
+            <p><strong>U66097544</strong></p>
+            <p><a href="mailto:ksingaram@usf.edu"><i class="fas fa-envelope"></i> ksingaram@usf.edu</a></p>
+        </div>
+    </section>
+
+    <section class="schema-section">
+        <h2>Data Schema Overview</h2>
+        <div class="schema-box">
+            <h3>SPORTS_EVENT</h3>
+            <ul>
+                <li>&bull; Match (text)</li>
+                <li>&bull; Date (text)</li>
+                <li>&bull; Venue (text)</li>
+                <li>&bull; Price (text)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="er-diagram">
+        <h2>Logical Data Model (ER Diagram)</h2>
+        <div class="er-box">
+            <div class="entity">
+                <h4>Team</h4>
+                <p>PK: TeamID</p>
+                <p>Name, League</p>
+            </div>
+            <div class="entity">
+                <h4>Event</h4>
+                <p>PK: EventID</p>
+                <p>FK: TeamID → Team</p>
+                <p>FK: VenueID → Venue</p>
+                <p>Date, Price</p>
+            </div>
+            <div class="entity">
+                <h4>Venue</h4>
+                <p>PK: VenueID</p>
+                <p>Name, Location, Capacity</p>
+            </div>
+            <div class="relationship">
+                <p>Team → Event (1:N)</p>
+                <p>Venue → Event (1:N)</p>
+            </div>
+        </div>
+    </section>
+</div>
