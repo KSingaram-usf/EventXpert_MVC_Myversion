@@ -35,7 +35,8 @@ namespace EventXpert.Controllers
                 .Take(5)
                 .ToListAsync();
 
-           try
+           // 2. Tampa Weather + Precipitation %
+            try
             {
                 var weatherUrl = "https://api.open-meteo.com/v1/forecast" +
                                 "?latitude=27.9506" +
@@ -45,7 +46,9 @@ namespace EventXpert.Controllers
                                 "&timezone=America/New_York";
 
                 var weatherJson = await _httpClient.GetStringAsync(weatherUrl);
-                System.IO.File.WriteAllText("wwwroot/debug_weather.json", weatherJson);
+
+                // Optional: Save for debug
+                // System.IO.File.WriteAllText("wwwroot/debug_weather.json", weatherJson);
 
                 var weatherResponse = JsonSerializer.Deserialize<WeatherResponse>(
                     weatherJson, 
@@ -55,26 +58,31 @@ namespace EventXpert.Controllers
                 {
                     model.TampaWeather = weatherResponse.CurrentWeather;
 
-                    var now = DateTime.Now;
-                    var currentHour = now.ToString("yyyy-MM-ddTHH:00");
-                    var index = weatherResponse.Hourly?.Time?.FindIndex(t => t == currentHour) ?? -1;
-
-                    if (index >= 0 && weatherResponse.Hourly?.PrecipitationProbability != null)
+                    // Match current hour
+                    if (weatherResponse.Hourly?.Time != null && 
+                        weatherResponse.Hourly.PrecipitationProbability != null)
                     {
-                        model.TampaWeather.PrecipitationProbability = weatherResponse.Hourly.PrecipitationProbability[index];
+                        var now = DateTime.Now;
+                        var currentHour = now.ToString("yyyy-MM-ddTHH:00");
+                        int index = weatherResponse.Hourly.Time.FindIndex(t => t == currentHour);
+                        if (index >= 0)
+                        {
+                            model.TampaWeather.PrecipitationProbability = weatherResponse.Hourly.PrecipitationProbability[index];
+                        }
                     }
-
-                    ViewData["Debug"] = $"SUCCESS: {model.TampaWeather.Temperature}°C, {model.TampaWeather.PrecipitationProbability}% precip";
-                }
-                else
-                {
-                    ViewData["Debug"] = "CurrentWeather is still null - check model names";
                 }
             }
             catch (Exception ex)
             {
-                model.TampaWeather = new CurrentWeather { Temperature = 0, Windspeed = 0, Weathercode = -1, PrecipitationProbability = 0 };
-                ViewData["Debug"] = $"ERROR: {ex.Message}";
+                // Optional: Log to console for Azure
+                Console.WriteLine($"Weather API Error: {ex.Message}");
+                model.TampaWeather = new CurrentWeather
+                {
+                    Temperature = 0,
+                    Windspeed = 0,
+                    Weathercode = -1,
+                    PrecipitationProbability = 0
+                };
             }
             /* -------------------------------------------------
                3. Live Soccer Scores (TheSportsDB v1)
