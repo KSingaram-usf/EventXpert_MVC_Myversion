@@ -861,3 +861,4 @@ C:/Users/School/OneDrive - University of South Florida/FALL 2025/App Dev/EventXp
 /Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/obj/Debug/net8.0/EventXpert.pdb
 /Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/obj/Debug/net8.0/EventXpert.genruntimeconfig.cache
 /Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/obj/Debug/net8.0/ref/EventXpert.dll
+/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/bin/Debug/net8.0/web.config

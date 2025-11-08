@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets/css/style.css"
     },
     {
+      "Id": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/debug_weather.json",
+      "PackagePath": "staticwebassets/debug_weather.json"
+    },
+    {
       "Id": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/img/ERD.png",
+      "PackagePath": "staticwebassets/img/ERD.png"
     },
     {
       "Id": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/img/bucs.png",

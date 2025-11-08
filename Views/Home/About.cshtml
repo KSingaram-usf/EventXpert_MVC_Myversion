@@ -49,29 +49,10 @@
     </section>
 
     <section class="er-diagram">
-        <h2>Logical Data Model (ER Diagram)</h2>
-        <div class="er-box">
-            <div class="entity">
-                <h4>Team</h4>
-                <p>PK: TeamID</p>
-                <p>Name, League</p>
-            </div>
-            <div class="entity">
-                <h4>Event</h4>
-                <p>PK: EventID</p>
-                <p>FK: TeamID → Team</p>
-                <p>FK: VenueID → Venue</p>
-                <p>Date, Price</p>
-            </div>
-            <div class="entity">
-                <h4>Venue</h4>
-                <p>PK: VenueID</p>
-                <p>Name, Location, Capacity</p>
-            </div>
-            <div class="relationship">
-                <p>Team → Event (1:N)</p>
-                <p>Venue → Event (1:N)</p>
-            </div>
-        </div>
-    </section>
+    <h2>Logical Data Model (ER Diagram)</h2>
+    <div class="er-image-box" style="text-align:center; padding:1em;">
+        <img src="~/img/ERD.png" alt="Entity Relationship Diagram" style="max-width:90%; height:auto; border:1px solid #ccc; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.07);" />
+    </div>
+</section>
+
 </div>

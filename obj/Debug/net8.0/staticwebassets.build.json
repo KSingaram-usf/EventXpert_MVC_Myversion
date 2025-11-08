@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iWyxT6Y024rKm1S+wZOM3QmwZ5SU1tvN/VAJrTwQhLg=",
+  "Hash": "03c0ZV+1L6gVAZCC56+H0d0mNNMfbaclxhTZys1uMU0=",
   "Source": "EventXpert",
   "BasePath": "_content/EventXpert",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot/css/style.css"
     },
     {
+      "Identity": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/debug_weather.json",
+      "SourceId": "EventXpert",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/",
+      "BasePath": "_content/EventXpert",
+      "RelativePath": "debug_weather.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/debug_weather.json"
+    },
+    {
       "Identity": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/favicon.ico",
       "SourceId": "EventXpert",
       "SourceType": "Discovered",
@@ -129,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/bucs.png"
+    },
+    {
+      "Identity": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/img/ERD.png",
+      "SourceId": "EventXpert",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/",
+      "BasePath": "_content/EventXpert",
+      "RelativePath": "img/ERD.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/ERD.png"
     },
     {
       "Identity": "/Users/kushalreddysingaram/GitRepo/EventXpert_MVC_MyVersion/wwwroot/img/lightning.png",
